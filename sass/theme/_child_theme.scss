@@ -1,7 +1,66 @@
+// General
+
+body {
+	background-color: #eee;
+}
+
+a {
+	text-decoration: none !important;
+}
+
+h1, h2, h3, h4, h5 {
+	color: 	$brand-secondary;
+}
+
+// Header
+
+.navbar-inverse .navbar-nav .nav-link, .navbar-inverse .navbar-nav .nav-link:focus, .navbar-inverse .navbar-nav .nav-link:hover{
+	color: $brand-primary;
+}
+
+.bg-inverse .dropdown-menu {
+	background-color: #fff;
+}
+
+.navbar-inverse .navbar-nav .nav-link:hover {
+	color: $brand-primary;
+}
+
 .bg-inverse {
 	background-color: #eee !important;
+	border-bottom: solid 10px $brand-primary;
 }
 
 .navbar-inverse .navbar-nav .nav-link {
 	color: #000;
+}
+
+// Pages
+
+.page_cta {
+	border: solid 5px $brand-primary;
+    padding: 35px 25px;
+    text-align: center;
+    background-color: #fff;
+    h1 {
+    	margin-bottom: 2.5rem;
+    }
+}
+
+// Footer
+
+#wrapper-footer {
+	background-color: $brand-primary;
+	color: #fff;
+	p {
+		font-size: 12px;
+		margin-bottom: .5rem;
+		a {
+			color: #fff;
+		}
+	}
+}
+
+#footerLogo {
+	height: 100px;
 }
