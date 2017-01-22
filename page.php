@@ -1,8 +1,11 @@
 <?php
 /**
- * Template Name: Full Width Page
+ * The template for displaying all pages.
  *
- * Template for displaying a page without sidebar even if a sidebar widget is published.
+ * This is the template that displays all pages by default.
+ * Please note that this is the WordPress construct of pages
+ * and that other 'pages' on your WordPress site will use a
+ * different template.
  *
  * @package understrap
  */
@@ -19,7 +22,9 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 			<div class="col-md-12 content-area" id="primary">
 
-				<main class="site-main" id="main" role="main">
+				<main class="site-main" id="main">
+
+					<?php while ( have_posts() ) : the_post(); ?>
 
 					<?php
 
@@ -27,12 +32,8 @@ $container = get_theme_mod( 'understrap_container_type' );
       					get_template_part( 'template-parts/content', 'home' );
     				}
 
-					elseif( is_page( 'about' ) ) {
-					    get_template_part( 'template-parts/content', 'about' );
-					}
-
-					elseif( is_page( 'contact' ) ) {
-					    get_template_part( 'template-parts/content', 'contact' );
+					elseif( is_page( 'get-directions' ) ) {
+					    get_template_part( 'template-parts/content', 'directions' );
 					}
 
 					else {
@@ -49,6 +50,8 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 						endif;
 						?>
+
+						<?php endwhile; // end of the loop. ?>
 
 				</main><!-- #main -->
 

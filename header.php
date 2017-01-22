@@ -67,6 +67,8 @@ $container = get_theme_mod( 'understrap_container_type' );
 					)
 				); ?>
 
+				<a class="btn btn-primary headerCTA" href="/get-a-quote/">Get A Quote</a>
+
 			</div><!-- .container -->
 
 		</nav><!-- .site-navigation -->

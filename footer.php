@@ -58,9 +58,11 @@ $container = get_theme_mod( 'understrap_container_type' );
 	<script>
 		jQuery(document).ready(function(){
   		jQuery(".owl-carousel").owlCarousel({
-  		autoplay: true,
+  		autoplay: false,
   		items: 1,
-  		center: true
+  		center: true,
+  		loop: true,
+  		autoHeight: true
   		});
 	});
 	</script>
