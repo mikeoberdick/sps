@@ -61,6 +61,7 @@ h1, h2, h3, h4, h5 {
 
 .headerCTA {
 	background: $brand-primary;
+	@include shadow;
 }
 
 // Pages
@@ -82,6 +83,35 @@ h1, h2, h3, h4, h5 {
 	display: flex;
     height: 150px;
     align-items: center;	
+}
+
+.cta {
+	margin-top: 50px;
+    margin-bottom: 50px;
+    padding: 50px 15px;
+    background: rgba(255, 125, 20, 1);
+    color: #fff;
+
+    h3 {
+    	color: #fff;
+    	font-weight: bold;
+    }
+}
+
+.cta_link {
+	display: flex;
+    align-items: center;
+    justify-content: center;
+
+    a {
+    	padding: 15px 25px;
+	    background: #3c83bb;
+	    border-radius: 5px;
+	    color: #fff;
+	    text-transform: uppercase;
+	    position: absolute;
+	    @include shadow;
+    }
 }
 
 

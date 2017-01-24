@@ -16,13 +16,15 @@
     ?>
 </div>
 
-<div class = "row">
-    <div class = "col-md-9">
-        <h3><?php the_field('call_to_action_heading', 'option'); ?></h3>
-        <p><?php the_field('call_to_action_text', 'option'); ?></p>
-    </div>
-    <div class = "col-md-3">
-        <a href = "<?php the_field('call_to_action_link', 'option'); ?>" role = "button">Learn More</a>
+<div class = "container">
+    <div class = "row cta">
+        <div class = "col-md-9 cta_info">
+            <h3><?php the_field('call_to_action_heading', 'option'); ?></h3>
+            <p><?php the_field('call_to_action_text', 'option'); ?></p>
+        </div>
+        <div class = "col-md-3 cta_link">
+            <a href = "<?php the_field('call_to_action_link', 'option'); ?>" role = "button">Learn More</a>
+        </div>
     </div>
 </div>
 
@@ -61,7 +63,7 @@
     ?>
 </div>
 
-<h1>Our Products</h1>
+<h1>Our Partners</h1>
 
 <hr>
 

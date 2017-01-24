@@ -71,7 +71,8 @@ $container = get_theme_mod( 'understrap_container_type' );
 
   		jQuery("#logoCarousel").owlCarousel({
   			autoplay: true,
-  			autoplayTimeout:1000,
+  			autoplaySpeed:1000,
+  			autoplayTimeout:1500,
     		autoplayHoverPause:true,
   			margin: 10,
 	  		items: 4,

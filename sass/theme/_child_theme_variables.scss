@@ -14,3 +14,10 @@ $navbar-height:                    60px;
 $navbar-margin-bottom:             0px;
 $navbar-border-radius:             0px;
 
+//Mix-Ins
+@mixin shadow {
+  -webkit-box-shadow: 0 8px 6px -6px black;
+	-moz-box-shadow: 0 8px 6px -6px black;
+	box-shadow: 0 8px 6px -6px black;
+}
+

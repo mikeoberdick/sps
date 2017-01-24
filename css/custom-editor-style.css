@@ -9469,7 +9469,10 @@ h1, h2, h3, h4, h5 {
   left: 0; }
 
 .headerCTA {
-  background: #3c83bb; }
+  background: #3c83bb;
+  -webkit-box-shadow: 0 8px 6px -6px black;
+  -moz-box-shadow: 0 8px 6px -6px black;
+  box-shadow: 0 8px 6px -6px black; }
 
 .page_cta {
   border: solid 5px #3c83bb;
@@ -9485,6 +9488,31 @@ h1, h2, h3, h4, h5 {
   display: flex;
   height: 150px;
   align-items: center; }
+
+.cta {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  padding: 50px 15px;
+  background: #ff7d14;
+  color: #fff; }
+  .cta h3 {
+    color: #fff;
+    font-weight: bold; }
+
+.cta_link {
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  .cta_link a {
+    padding: 15px 25px;
+    background: #3c83bb;
+    border-radius: 5px;
+    color: #fff;
+    text-transform: uppercase;
+    position: absolute;
+    -webkit-box-shadow: 0 8px 6px -6px black;
+    -moz-box-shadow: 0 8px 6px -6px black;
+    box-shadow: 0 8px 6px -6px black; }
 
 .hp_testimonial {
   background: #3c83bb;
