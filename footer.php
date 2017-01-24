@@ -57,13 +57,20 @@ $container = get_theme_mod( 'understrap_container_type' );
 	echo '
 	<script>
 		jQuery(document).ready(function(){
-  		jQuery(".owl-carousel").owlCarousel({
-  		autoplay: false,
-  		items: 1,
-  		center: true,
-  		loop: true,
-  		autoHeight: true
+
+  		jQuery("#logoCarousel").owlCarousel({
+	  		items: 4,
+	  		loop: true
   		});
+
+		jQuery("#testimonialCarousel").owlCarousel({
+	  		autoplay: false,
+	  		items: 1,
+	  		center: true,
+	  		loop: true,
+	  		autoHeight: true
+  		});
+
 	});
 	</script>
 	'; } ?>

@@ -12,36 +12,35 @@
 
 		</article><!-- #post-## -->
 
+            <div id = "logoCarousel" class="owl-carousel owl-theme">
+                    <?php
+                    if (have_rows('logos', 'option') ):
+                        while (have_rows('logos', 'option')) : the_row();
+                            ?>
+                                <img class = "carouselLogo item" src = "<?php the_sub_field('logo'); ?>">
+                            <?php
+                        endwhile;
+                    else :
+                    endif;
+                    ?>
+            </div>
 
-
-
-<!--<ul id="owl-demo" class="owl-carousel owl-theme">
-	<?php
-	$images = get_field('slider');
-	foreach ($images as $image):?>	
-		<li>
-			<img src="<?php echo $image['sizes']['thumbnail']; ?>" alt="<?php echo $image['alt']; ?>" />
-	    </li>	    
-    <?php endforeach;?>
-</ul>
--->
-
-<div class="owl-carousel owl-theme">
-                <?php
-                if (have_rows('homepage_testimonials')):
-                    while (have_rows('homepage_testimonials')) : the_row();
-                        ?>
-                        <div class="hp_testimonial item">
-                            <?php 	$author = get_sub_field('testimonial_author');
-                            		$testimonial = get_sub_field('testimonial_text');
-									$location = get_sub_field('testimonial_location');
-							?>
-                            <div class = "testimonialText"><?php echo $testimonial; ?></div>
-                            <div class = "testimonialAuthor"><?php echo $author; ?> | <?php echo $location; ?></div>
-                        </div>
+        <div id = "testimonialCarousel" class="owl-carousel owl-theme">
                         <?php
-                    endwhile;
-                else :
-                endif;
-                ?>
-</div>
+                        if (have_rows('homepage_testimonials')):
+                            while (have_rows('homepage_testimonials')) : the_row();
+                                ?>
+                                <div class="hp_testimonial item">
+                                    <?php 	$author = get_sub_field('testimonial_author');
+                                    		$testimonial = get_sub_field('testimonial_text');
+        									$location = get_sub_field('testimonial_location');
+        							?>
+                                    <div class = "testimonialText"><?php echo $testimonial; ?></div>
+                                    <div class = "testimonialAuthor"><?php echo $author; ?> | <?php echo $location; ?></div>
+                                </div>
+                                <?php
+                            endwhile;
+                        else :
+                        endif;
+                        ?>
+        </div>

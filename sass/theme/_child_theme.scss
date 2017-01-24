@@ -24,7 +24,7 @@ h1, h2, h3, h4, h5 {
 	background-color: #fff;
 }
 
-.navbar-inverse .navbar-nav .nav-link:hover {
+.navbar-inverse .navbar-nav .nav-link:hover, .navbar-inverse .navbar-nav .active>.nav-link, .navbar-inverse .navbar-nav .nav-link.active, .navbar-inverse .navbar-nav .nav-link.open, .navbar-inverse .navbar-nav .open>.nav-link {
 	color: $brand-primary;
 }
 
@@ -37,6 +37,30 @@ h1, h2, h3, h4, h5 {
 
 .navbar-inverse .navbar-nav .nav-link {
 	color: #000;
+}
+
+.dropdown-menu {
+	a {
+		&:hover {
+			background: #fff !important;
+		}
+	}
+	
+	:before {
+		width: 0;
+	    height: 0;
+	    border-left: 25px solid transparent;
+	    border-right: 25px solid transparent;
+	    border-bottom: 25px solid #fff;
+	    content: '';
+	    position: absolute;
+	    top: -10px;
+	    left: 0;
+	}
+}
+
+.headerCTA {
+	background: $brand-primary;
 }
 
 // Pages
@@ -53,6 +77,13 @@ h1, h2, h3, h4, h5 {
 }
 
 /********************************************** HOMEPAGE */
+
+.hp_carousel {
+	display: flex;
+    height: 150px;
+    align-items: center;	
+}
+
 
 .hp_testimonial {
 	background: $brand-primary;
@@ -71,7 +102,7 @@ h1, h2, h3, h4, h5 {
 			background-image: url('/wp-content/themes/understrap-child-master/img/quote_bg.png');
 			background-size: contain;
 			background-repeat: no-repeat;
-			opacity: .5;
+			opacity: .2;
 			position: absolute;
 			top: 35px;
 			left: 35px;
@@ -82,6 +113,22 @@ h1, h2, h3, h4, h5 {
 		font-style: italic;
 		text-align: right;
 	}
+}
+
+// FORMS
+
+.nf-form-content {
+	margin: 0 !important;
+}
+
+.nf-form-content input[type="submit"], .nf-form-content input[type="button"], .nf-form-content button {
+	background: $brand-primary !important;
+	color: #fff !important;
+	}
+
+.nf-form-content input[type="submit"]:hover, .nf-form-content input[type="button"]:hover, .nf-form-content button:hover {
+	opacity: .9;
+	color: #fff !important;
 }
 
 // Footer

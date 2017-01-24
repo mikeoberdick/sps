@@ -42,7 +42,7 @@ add_action( 'wp_enqueue_scripts', 'theme_scripts_and_styles' );
 
 if( function_exists('acf_add_options_page') ) {
     
-    acf_add_options_page( 'Company Info' );
+    acf_add_options_page( 'Edit Site Content' );
     
 }
 
