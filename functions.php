@@ -32,6 +32,7 @@ add_action( 'wp_enqueue_scripts', 'google_fonts_styles' );
 function theme_scripts_and_styles() {
 	if( is_page ( 'homepage') ) {
     wp_enqueue_style( 'Owl Carousel CSS', get_stylesheet_directory_uri() . '/owl-carousel/owl.carousel.min.css' );
+    wp_enqueue_style( 'Owl Carousel Animation', get_stylesheet_directory_uri() . '/owl-carousel/animate.css' );
     wp_enqueue_style( 'Owl Carousel Theme', get_stylesheet_directory_uri() . '/owl-carousel/owl.theme.default.min.css' );
     wp_enqueue_script( 'Owl Carousel ', get_template_directory_uri() . '/owl-carousel/owl.carousel.min.js', array('jquery'), '1.0.0', true );
 	}

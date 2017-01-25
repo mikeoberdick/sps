@@ -59,13 +59,12 @@ $container = get_theme_mod( 'understrap_container_type' );
 		jQuery(document).ready(function(){
 
 		jQuery("#hpSliders").owlCarousel({
-	  		autoplay: true,
-	  		autoplayTimeout:3000,
-    		autoplayHoverPause:true,
+	  		autoplay: false,
+	  		autoplaySpeed:500,
+  			autoplayTimeout:5000,
 	  		items: 1,
-	  		center: true,
 	  		loop: true,
-	  		autoHeight: true
+    		animateOut: "fadeOut"
 
   		});
 

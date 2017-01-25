@@ -1,20 +1,45 @@
-<div id = "hpSliders" class="owl-carousel owl-theme">
+<div class = "slider_wrapper">
+<div id = "hpSliders" class=" owl-carousel owl-theme">
     <?php
     if (have_rows('slider_info', 'option') ):
         while (have_rows('slider_info', 'option')) : the_row();
             ?>
-            <div class = "hp_slider" class = "item">
-                <h3><?php the_sub_field('slide_title'); ?></h3>
-                <p><?php the_sub_field('slide_text'); ?></p>
-                <a href = "<?php the_sub_field('slide_link'); ?>" role = "button">Learn More</a>
+            <div class = " row hp_slider no-gutters" class = "item">
+                <div class = "col-md-4 slide_content">
+                    <h3><?php the_sub_field('slide_title'); ?></h3>
+                    <p><?php the_sub_field('slide_text'); ?></p>
+                    <a href = "<?php the_sub_field('slide_link'); ?>" role = "button">Learn More</a>
+                </div>
+                <div class = "col-md-8 slide_image">
                 <img src = "<?php the_sub_field('slide_image'); ?>">
+                </div>
             </div>
+
             <?php
         endwhile;
         else :
     endif;
     ?>
 </div>
+</div><!-- .slider_wrapper -->
+
+<?php if (have_rows('hp_sections', 'option') ):
+        while (have_rows('hp_sections', 'option')) : the_row();
+            ?>
+            <div class = "row">
+                <div class = "col-md-4 hp_section">
+                    <h3><?php the_sub_field('title'); ?></h3>
+                    <img src = "<?php the_sub_field('image'); ?>">
+                    <p><?php the_sub_field('content'); ?></p>
+                    <a href = "<?php the_sub_field('link'); ?>" role = "button">Learn More</a>
+                </div>
+            </div>
+
+            <?php
+        endwhile;
+        else :
+    endif;
+    ?>
 
 <div class = "container">
     <div class = "row cta">
@@ -27,17 +52,6 @@
         </div>
     </div>
 </div>
-
-		
-<article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
-
-	<div class="entry-content">
-
-		<?php the_content(); ?>
-
-	</div><!-- .entry-content -->
-
-</article><!-- #post-## -->
 
 <h1>Testimonials</h1>
 

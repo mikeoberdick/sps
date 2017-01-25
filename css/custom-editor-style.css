@@ -9429,6 +9429,15 @@ body {
   background-color: #eee;
   font-family: 'Open Sans', sans-serif; }
 
+#full-width-page-wrapper {
+  padding-top: 0; }
+
+.content-area {
+  margin-top: 25px;
+  padding-left: 50px;
+  padding-right: 50px;
+  background: #fff; }
+
 a {
   text-decoration: none !important; }
 
@@ -9449,7 +9458,10 @@ h1, h2, h3, h4, h5 {
   background-image: url("/wp-content/themes/understrap-child-master/img/header_bg.jpg");
   background-size: cover;
   background-color: transparent !important;
-  border-bottom: solid 10px #3c83bb; }
+  border-bottom: solid 10px #3c83bb;
+  -webkit-box-shadow: 0 8px 6px -6px black;
+  -moz-box-shadow: 0 8px 6px -6px black;
+  box-shadow: 0 8px 6px -6px black; }
 
 .navbar-inverse .navbar-nav .nav-link {
   color: #000; }
@@ -9484,17 +9496,67 @@ h1, h2, h3, h4, h5 {
     margin-bottom: 2.5rem; }
 
 /********************************************** HOMEPAGE */
+.slider_wrapper {
+  height: 450px;
+  background: #3c83bb;
+  margin-left: -50px;
+  margin-right: -50px;
+  margin-bottom: 50px; }
+  .slider_wrapper .slide_content {
+    padding: 50px;
+    color: #fff; }
+    .slider_wrapper .slide_content h3 {
+      color: #fff;
+      font-weight: bold; }
+    .slider_wrapper .slide_content a {
+      color: #fff;
+      border: solid 2px #fff;
+      padding: 15px;
+      display: block;
+      text-align: center;
+      margin-top: 25px;
+      transition: all 1s;
+      border-radius: 5px; }
+      .slider_wrapper .slide_content a:hover {
+        background: #fff;
+        color: #3c83bb; }
+  .slider_wrapper img {
+    height: 450px; }
+
+.hp_section {
+  padding: 25px;
+  border: solid 2px #ddd; }
+  .hp_section h3 {
+    text-align: center;
+    margin-bottom: 15px; }
+  .hp_section a {
+    display: block;
+    border: solid #3c83bb;
+    border-radius: 5px;
+    text-align: center;
+    padding: 10px;
+    color: #ff7d14;
+    transition: all 1s;
+    text-transform: uppercase;
+    font-weight: bold; }
+    .hp_section a:hover {
+      border: solid #ff7d14;
+      color: #3c83bb; }
+
 .hp_carousel {
   display: flex;
   height: 150px;
   align-items: center; }
 
 .cta {
-  margin-top: 50px;
-  margin-bottom: 50px;
-  padding: 50px 15px;
+  padding: 50px 25px 50px 50px;
   background: #ff7d14;
-  color: #fff; }
+  background: -webkit-linear-gradient(left, #ff7900, #feae65);
+  background: -o-linear-gradient(right, #ff7900, #feae65);
+  background: -moz-linear-gradient(right, #ff7900, #feae65);
+  background: linear-gradient(to right, #ff7900, #feae65);
+  color: #fff;
+  margin: 50px -65px; }
   .cta h3 {
     color: #fff;
     font-weight: bold; }

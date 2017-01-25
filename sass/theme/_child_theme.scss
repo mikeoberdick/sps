@@ -5,12 +5,23 @@ body {
 	font-family: 'Open Sans', sans-serif;
 }
 
+#full-width-page-wrapper {
+	padding-top: 0;
+}
+
+.content-area {
+	margin-top: 25px;
+	padding-left: 50px;
+    padding-right: 50px;
+    background: #fff;
+}
+
 a {
 	text-decoration: none !important;
 }
 
 h1, h2, h3, h4, h5 {
-	color: 	$brand-secondary;
+	color: 	$brand-tertiary;
 	font-family: 'Cabin', sans-serif;
 }
 
@@ -33,6 +44,7 @@ h1, h2, h3, h4, h5 {
 	background-size: cover;
 	background-color: transparent !important;
 	border-bottom: solid 10px $brand-primary;
+	@include shadow;
 }
 
 .navbar-inverse .navbar-nav .nav-link {
@@ -78,6 +90,70 @@ h1, h2, h3, h4, h5 {
 }
 
 /********************************************** HOMEPAGE */
+.slider_wrapper {
+	height: 450px;
+    background: $brand-primary;
+    margin-left: -50px;
+    margin-right: -50px;
+    margin-bottom: 50px;
+
+    .slide_content {
+    	padding: 50px;
+    	color: #fff;
+
+    	h3 {
+    		color: #fff;
+    		font-weight: bold;
+    	}
+
+	    	a {
+	    		color: #fff;
+			    border: solid 2px #fff;
+			    padding: 15px;
+			    display: block;
+			    text-align: center;
+			    margin-top: 25px;
+			    transition: all 1s;
+    			@include border-radius(5px);
+
+			    &:hover {
+			    	background:#fff;
+			    	color: $brand-primary;
+			    }
+	    	}
+    }
+
+    img {
+    	height: 450px;
+    	}
+}	
+
+.hp_section {
+	padding: 25px;
+    border: solid 2px #ddd;
+
+    h3 {
+    	text-align: center;
+    	margin-bottom: 15px;
+    }
+
+    a {
+    	display: block;
+	    border: solid $brand-primary;
+	    @include border-radius(5px);
+	    text-align: center;
+	    padding: 10px;
+	    color: $brand-secondary;
+	    transition: all 1s;
+	    text-transform: uppercase;
+	    font-weight: bold;
+	    &:hover {
+	    	border: solid $brand-secondary;
+	    	color: $brand-primary;
+	    }
+    }
+}
+
 
 .hp_carousel {
 	display: flex;
@@ -86,11 +162,14 @@ h1, h2, h3, h4, h5 {
 }
 
 .cta {
-	margin-top: 50px;
-    margin-bottom: 50px;
-    padding: 50px 15px;
-    background: rgba(255, 125, 20, 1);
+    padding: 50px 25px 50px 50px;
+        background: $brand-secondary;
+    background: -webkit-linear-gradient(left, #ff7900 , #feae65);
+    background: -o-linear-gradient(right, #ff7900, #feae65);
+    background: -moz-linear-gradient(right, #ff7900, #feae65);
+    background: linear-gradient(to right, #ff7900 , #feae65);
     color: #fff;
+    margin: 50px -65px;
 
     h3 {
     	color: #fff;
@@ -106,7 +185,7 @@ h1, h2, h3, h4, h5 {
     a {
     	padding: 15px 25px;
 	    background: #3c83bb;
-	    border-radius: 5px;
+	    @include border-radius(5px);
 	    color: #fff;
 	    text-transform: uppercase;
 	    position: absolute;
@@ -119,7 +198,7 @@ h1, h2, h3, h4, h5 {
 	background: $brand-primary;
 	padding: 50px;
 	color: #fff;
-	border-radius: 5px;
+	@include border-radius(5px);
 
 	.testimonialText {
 		margin-left: 25px;
