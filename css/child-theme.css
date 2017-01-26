@@ -9610,6 +9610,38 @@ h1, h2, h3, h4, h5 {
     font-style: italic;
     text-align: right; }
 
+/********************************************** TESTIMONIALS */
+.page_testimonials {
+  display: flex;
+  flex-wrap: wrap; }
+  .page_testimonials .testimonial_outer_wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 25px; }
+  .page_testimonials .testimonial_wrapper {
+    border: 1px solid #ff7d14;
+    padding: 25px;
+    margin-bottom: 50px;
+    position: relative;
+    border-radius: 10px; }
+    .page_testimonials .testimonial_wrapper:before {
+      content: "";
+      background-color: #fff;
+      background-image: url("/wp-content/themes/understrap-child-master/img/orange_quote_bg.png");
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-size: 25px;
+      background-position: center;
+      height: 50px;
+      width: 50px;
+      position: absolute;
+      top: -25px;
+      left: 50%;
+      margin-left: -25px;
+      border-radius: 25px;
+      border: solid 3px #3c83bb;
+      outline: solid 10px #fff; }
+
 .nf-form-content {
   margin: 0 !important; }
 

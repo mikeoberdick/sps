@@ -48,6 +48,10 @@ $container = get_theme_mod( 'understrap_container_type' );
 					    get_template_part( 'template-parts/content', 'directions' );
 					}
 
+					elseif( is_page( 'testimonials' ) ) {
+					    get_template_part( 'template-parts/content', 'testimonials' );
+					}
+
 					else {
 					   get_template_part( 'loop-templates/content', 'page' );
 					}
