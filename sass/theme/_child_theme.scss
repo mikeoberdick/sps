@@ -5,12 +5,16 @@ body {
 	font-family: 'Open Sans', sans-serif;
 }
 
-#full-width-page-wrapper {
+.wrapper {
+	padding: 50px 0;
+}
+
+#hp-full-width-page-wrapper {
 	padding-top: 0;
 }
 
 .content-area {
-	margin-top: 25px;
+	padding-top: 25px;
 	padding-left: 50px;
     padding-right: 50px;
     background: #fff;
@@ -21,7 +25,7 @@ a {
 }
 
 h1, h2, h3, h4, h5 {
-	color: 	$brand-tertiary;
+	color: 	$brand-primary;
 	font-family: 'Cabin', sans-serif;
 }
 
@@ -91,6 +95,7 @@ h1, h2, h3, h4, h5 {
 
 /********************************************** HOMEPAGE */
 .slider_wrapper {
+	margin-top: -25px;
 	height: 450px;
     background: $brand-primary;
     margin-left: -50px;
@@ -126,32 +131,43 @@ h1, h2, h3, h4, h5 {
     img {
     	height: 450px;
     	}
-}	
+}
 
-.hp_section {
-	padding: 25px;
-    border: solid 2px #ddd;
+.sectionWrap {
+	    margin-top: 25px;
 
-    h3 {
-    	text-align: center;
-    	margin-bottom: 15px;
-    }
+	.hp_section {
+		padding: 25px;
+		height: 100%;
+	    border: 2px solid #ddd;
+	    margin-top: 25px;
 
-    a {
-    	display: block;
-	    border: solid $brand-primary;
-	    @include border-radius(5px);
-	    text-align: center;
-	    padding: 10px;
-	    color: $brand-secondary;
-	    transition: all 1s;
-	    text-transform: uppercase;
-	    font-weight: bold;
-	    &:hover {
-	    	border: solid $brand-secondary;
-	    	color: $brand-primary;
+	    h3 {
+	    	text-align: center;
+	    	margin-bottom: 15px;
 	    }
-    }
+
+	    .imgContainer {
+	    	height: 100px;
+	    	overflow: hidden;
+	    }
+
+	    a {
+	    	display: block;
+		    border: solid $brand-primary;
+		    @include border-radius(5px);
+		    text-align: center;
+		    padding: 10px;
+		    color: $brand-secondary;
+		    transition: all 1s;
+		    text-transform: uppercase;
+		    font-weight: bold;
+		    &:hover {
+		    	background: $brand-secondary;
+		    	color: #fff;
+		    }
+	    }
+	}
 }
 
 
@@ -188,7 +204,6 @@ h1, h2, h3, h4, h5 {
 	    @include border-radius(5px);
 	    color: #fff;
 	    text-transform: uppercase;
-	    position: absolute;
 	    @include shadow;
     }
 }

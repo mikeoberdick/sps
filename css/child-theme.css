@@ -9429,11 +9429,14 @@ body {
   background-color: #eee;
   font-family: 'Open Sans', sans-serif; }
 
-#full-width-page-wrapper {
+.wrapper {
+  padding: 50px 0; }
+
+#hp-full-width-page-wrapper {
   padding-top: 0; }
 
 .content-area {
-  margin-top: 25px;
+  padding-top: 25px;
   padding-left: 50px;
   padding-right: 50px;
   background: #fff; }
@@ -9442,7 +9445,7 @@ a {
   text-decoration: none !important; }
 
 h1, h2, h3, h4, h5 {
-  color: #fe1100;
+  color: #3c83bb;
   font-family: 'Cabin', sans-serif; }
 
 .navbar-inverse .navbar-nav .nav-link, .navbar-inverse .navbar-nav .nav-link:focus, .navbar-inverse .navbar-nav .nav-link:hover {
@@ -9497,6 +9500,7 @@ h1, h2, h3, h4, h5 {
 
 /********************************************** HOMEPAGE */
 .slider_wrapper {
+  margin-top: -25px;
   height: 450px;
   background: #3c83bb;
   margin-left: -50px;
@@ -9523,25 +9527,32 @@ h1, h2, h3, h4, h5 {
   .slider_wrapper img {
     height: 450px; }
 
-.hp_section {
-  padding: 25px;
-  border: solid 2px #ddd; }
-  .hp_section h3 {
-    text-align: center;
-    margin-bottom: 15px; }
-  .hp_section a {
-    display: block;
-    border: solid #3c83bb;
-    border-radius: 5px;
-    text-align: center;
-    padding: 10px;
-    color: #ff7d14;
-    transition: all 1s;
-    text-transform: uppercase;
-    font-weight: bold; }
-    .hp_section a:hover {
-      border: solid #ff7d14;
-      color: #3c83bb; }
+.sectionWrap {
+  margin-top: 25px; }
+  .sectionWrap .hp_section {
+    padding: 25px;
+    height: 100%;
+    border: 2px solid #ddd;
+    margin-top: 25px; }
+    .sectionWrap .hp_section h3 {
+      text-align: center;
+      margin-bottom: 15px; }
+    .sectionWrap .hp_section .imgContainer {
+      height: 100px;
+      overflow: hidden; }
+    .sectionWrap .hp_section a {
+      display: block;
+      border: solid #3c83bb;
+      border-radius: 5px;
+      text-align: center;
+      padding: 10px;
+      color: #ff7d14;
+      transition: all 1s;
+      text-transform: uppercase;
+      font-weight: bold; }
+      .sectionWrap .hp_section a:hover {
+        background: #ff7d14;
+        color: #fff; }
 
 .hp_carousel {
   display: flex;
@@ -9571,7 +9582,6 @@ h1, h2, h3, h4, h5 {
     border-radius: 5px;
     color: #fff;
     text-transform: uppercase;
-    position: absolute;
     -webkit-box-shadow: 0 8px 6px -6px black;
     -moz-box-shadow: 0 8px 6px -6px black;
     box-shadow: 0 8px 6px -6px black; }

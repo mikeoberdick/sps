@@ -23,23 +23,26 @@
 </div>
 </div><!-- .slider_wrapper -->
 
+<div class = "row">
 <?php if (have_rows('hp_sections', 'option') ):
         while (have_rows('hp_sections', 'option')) : the_row();
             ?>
-            <div class = "row">
-                <div class = "col-md-4 hp_section">
-                    <h3><?php the_sub_field('title'); ?></h3>
-                    <img src = "<?php the_sub_field('image'); ?>">
-                    <p><?php the_sub_field('content'); ?></p>
-                    <a href = "<?php the_sub_field('link'); ?>" role = "button">Learn More</a>
+                <div class = "col-md-4 sectionWrap">
+                    <div class = "hp_section">
+                        <h3><?php the_sub_field('title'); ?></h3>
+                        <div class = "imgContainer">
+                            <img src = "<?php the_sub_field('image'); ?>">
+                        </div>
+                        <p><?php the_sub_field('content'); ?></p>
+                        <a href = "<?php the_sub_field('link'); ?>" role = "button">Learn More</a>
+                    </div>
                 </div>
-            </div>
-
             <?php
         endwhile;
         else :
     endif;
     ?>
+</div>
 
 <div class = "container">
     <div class = "row cta">

@@ -14,6 +14,18 @@ get_header();
 $container = get_theme_mod( 'understrap_container_type' );
 ?>
 
+<!--
+	<?php if( is_page( 'homepage' ) ) {
+		echo '<div class="wrapper" id="hp-full-width-page-wrapper">';
+	}
+		else {
+				echo '<div class="wrapper" id="full-width-page-wrapper">';
+			}
+
+?>
+
+-->
+
 <div class="wrapper" id="full-width-page-wrapper">
 
 	<div class="<?php echo esc_html( $container ); ?>" id="content">
