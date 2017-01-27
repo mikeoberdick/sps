@@ -12,6 +12,10 @@ $container   = get_theme_mod( 'understrap_container_type' ); ?>
 
 <div class="wrapper" id="page-wrapper">
 
+<header class="entry-header">
+	<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+</header><!-- .entry-header -->
+
 	<div class="<?php echo esc_html( $container ); ?>" id="content" tabindex="-1">
 
 		<div class="row">
@@ -29,7 +33,7 @@ $container   = get_theme_mod( 'understrap_container_type' ); ?>
 					}
 
 					elseif( is_page( 'get-directions' ) ) {
-					    get_template_part( 'template-parts/content', 'directions' );
+					    get_template_part( 'template-parts/content', 'get-a-quote' );
 					}
 
 					else {

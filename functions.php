@@ -20,6 +20,12 @@ function theme_enqueue_styles() {
     wp_enqueue_script( 'child-understrap-scripts', get_stylesheet_directory_uri() . '/js/child-theme.min.js', array(), $the_theme->get( 'Version' ), true );
 }
 
+// Add the Font Awesome Styles
+function fa_styles() {
+    wp_enqueue_style( 'Font Awesome CSS', get_stylesheet_directory_uri() . '/font-awesome/font-awesome.min.css' );
+}
+add_action( 'wp_enqueue_scripts', 'fa_styles' );
+
 // Add the styles and for Google Fonts
 function google_fonts_styles() {
     wp_enqueue_style( 'cabin-font', 'https://fonts.googleapis.com/css?family=Cabin', false );

@@ -1,25 +1,19 @@
-<header class="entry-header">
+<article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
 
-        <?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+        <div class="entry-content">
 
-    </header><!-- .entry-header -->
-        
-        <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
+            <?php the_content(); ?>
 
-                <div class="entry-content">
+        </div><!-- .entry-content -->
 
-                    <?php the_content(); ?>
-
-                </div><!-- .entry-content -->
-
-        </article><!-- #post-## -->
+</article><!-- #post-## -->
 
 <?php 
 
 $images = get_field('gallery', 'option');
 
 if( $images ): ?>
-    <div class = "row">
+    <div class = "row gallery_images">
         <?php foreach( $images as $image ): ?>
             <div class = "col-sm-2 gallery_thumb" data-aos="fade-up">
                 <a class = "gallery" href="<?php echo $image['url']; ?>" data-featherlight="image">

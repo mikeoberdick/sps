@@ -1,18 +1,12 @@
-<header class="entry-header">
+<article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
 
-        <?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+        <div class="entry-content">
 
-    </header><!-- .entry-header -->
-        
-        <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
+            <?php the_content(); ?>
 
-                <div class="entry-content">
+        </div><!-- .entry-content -->
 
-                    <?php the_content(); ?>
-
-                </div><!-- .entry-content -->
-
-        </article><!-- #post-## -->
+</article><!-- #post-## -->
 
 <div class = "page_testimonials">
     <?php
