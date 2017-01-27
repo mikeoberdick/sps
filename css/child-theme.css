@@ -9425,6 +9425,8 @@ aside.widget {
 .gallery-caption {
   display: block; }
 
+/* General
+   ========================================================================== */
 body {
   background-color: #eee;
   font-family: 'Open Sans', sans-serif; }
@@ -9448,6 +9450,8 @@ h1, h2, h3, h4, h5 {
   color: #3c83bb;
   font-family: 'Cabin', sans-serif; }
 
+/* Header
+   ========================================================================== */
 .navbar-inverse .navbar-nav .nav-link, .navbar-inverse .navbar-nav .nav-link:focus, .navbar-inverse .navbar-nav .nav-link:hover {
   color: #3c83bb; }
 
@@ -9489,6 +9493,8 @@ h1, h2, h3, h4, h5 {
   -moz-box-shadow: 0 8px 6px -6px black;
   box-shadow: 0 8px 6px -6px black; }
 
+/* Pages
+   ========================================================================== */
 .page_cta {
   border: solid 5px #3c83bb;
   font-family: 'Open Sans Condensed', sans-serif;
@@ -9498,7 +9504,8 @@ h1, h2, h3, h4, h5 {
   .page_cta h1 {
     margin-bottom: 2.5rem; }
 
-/********************************************** HOMEPAGE */
+/* Homepage
+   ========================================================================== */
 .slider_wrapper {
   margin-top: -25px;
   height: 450px;
@@ -9610,7 +9617,8 @@ h1, h2, h3, h4, h5 {
     font-style: italic;
     text-align: right; }
 
-/********************************************** TESTIMONIALS */
+/* Testimonials
+   ========================================================================== */
 .page_testimonials {
   display: flex;
   flex-wrap: wrap; }
@@ -9621,6 +9629,7 @@ h1, h2, h3, h4, h5 {
   .page_testimonials .testimonial_wrapper {
     border: 1px solid #ff7d14;
     padding: 25px;
+    padding-top: 50px;
     margin-bottom: 50px;
     position: relative;
     border-radius: 10px; }
@@ -9641,7 +9650,27 @@ h1, h2, h3, h4, h5 {
       border-radius: 25px;
       border: solid 3px #3c83bb;
       outline: solid 10px #fff; }
+    .page_testimonials .testimonial_wrapper .testimonialAuthor {
+      text-align: right;
+      color: #3c83bb;
+      font-weight: bold; }
 
+/* Gallery
+   ========================================================================== */
+.gallery_thumb {
+  margin-bottom: 50px; }
+  .gallery_thumb a {
+    display: inline-block;
+    display: block;
+    padding: 4px;
+    border: 1px solid #3c83bb;
+    border-radius: 4px;
+    transition: border-color 1s; }
+    .gallery_thumb a:hover {
+      border-color: #ff7d14; }
+
+/* Forms
+   ========================================================================== */
 .nf-form-content {
   margin: 0 !important; }
 
@@ -9653,6 +9682,8 @@ h1, h2, h3, h4, h5 {
   opacity: .9;
   color: #fff !important; }
 
+/* Footer
+   ========================================================================== */
 #wrapper-footer {
   background-color: #3c83bb;
   color: #fff; }

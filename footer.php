@@ -59,7 +59,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 		jQuery(document).ready(function(){
 
 		jQuery("#hpSliders").owlCarousel({
-	  		autoplay: false,
+	  		autoplay: true,
 	  		autoplaySpeed:500,
   			autoplayTimeout:5000,
 	  		items: 1,
@@ -91,6 +91,20 @@ $container = get_theme_mod( 'understrap_container_type' );
 	});
 	</script>
 	'; } ?>
+
+<?php if( is_page ( 'gallery-of-work') ) {
+	echo '
+	<script>
+
+	jQuery(document).ready(function(){
+		
+		jQuery(".gallery").featherlightGallery();
+
+		AOS.init();
+
+	});
+	</script>'; 
+} ?>
 
 <?php wp_footer(); ?>
 

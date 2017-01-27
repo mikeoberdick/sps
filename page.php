@@ -52,6 +52,10 @@ $container = get_theme_mod( 'understrap_container_type' );
 					    get_template_part( 'template-parts/content', 'testimonials' );
 					}
 
+					elseif( is_page( 'gallery-of-work' ) ) {
+					    get_template_part( 'template-parts/content', 'gallery' );
+					}
+
 					else {
 					   get_template_part( 'loop-templates/content', 'page' );
 					}
