@@ -9430,6 +9430,9 @@ aside.widget {
 body {
   font-family: 'Open Sans', sans-serif; }
 
+.hp_wrapper {
+  margin-top: 50px; }
+
 .wrapper {
   padding-top: 0;
   padding-bottom: 100px;
@@ -9553,9 +9556,6 @@ h1, h2, h3, h4, h5 {
     .sectionWrap .hp_section h3 {
       text-align: center;
       margin-bottom: 15px; }
-    .sectionWrap .hp_section .imgContainer {
-      height: 100px;
-      overflow: hidden; }
     .sectionWrap .hp_section a {
       display: block;
       border: solid #3c83bb;
@@ -9705,7 +9705,8 @@ h1, h2, h3, h4, h5 {
   #blog-sidebar .widget .widget-title {
     background: #ff7900;
     color: #fff;
-    padding: 5px 10px; }
+    padding: 5px 10px;
+    margin-bottom: 25px; }
 
 #blogPagination {
   margin: 0 auto;
@@ -9730,11 +9731,11 @@ h1, h2, h3, h4, h5 {
   background-color: #3c83bb;
   color: #fff;
   padding: 50px 0; }
+  #wrapper-footer a {
+    color: #fff; }
   #wrapper-footer p {
     font-size: 12px;
     margin-bottom: .5rem; }
-    #wrapper-footer p a {
-      color: #fff; }
 
 #footerLogo {
   height: 100px; }
