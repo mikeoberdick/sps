@@ -20,12 +20,6 @@ function theme_enqueue_styles() {
     wp_enqueue_script( 'child-understrap-scripts', get_stylesheet_directory_uri() . '/js/child-theme.min.js', array(), $the_theme->get( 'Version' ), true );
 }
 
-// Add the Font Awesome Styles
-function fa_styles() {
-    wp_enqueue_style( 'Font Awesome CSS', get_stylesheet_directory_uri() . '/font-awesome/font-awesome.min.css' );
-}
-add_action( 'wp_enqueue_scripts', 'fa_styles' );
-
 // Add the styles and for Google Fonts
 function google_fonts_styles() {
     wp_enqueue_style( 'cabin-font', 'https://fonts.googleapis.com/css?family=Cabin', false );
@@ -76,17 +70,29 @@ if( function_exists('acf_add_options_page') ) {
 }
 
 // Register the Contact Page Sidebar
-
 add_action( 'widgets_init', 'sps_sidebars' );
+
 function sps_sidebars() {
+
     register_sidebar( array(
         'name' => 'Contact Sidebar',
         'id' => 'contact-sidebar',
         'description' => 'Widgets in this area will be shown on all all contact pages.',
         'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-    'after_widget'  => '</aside>',
-    'before_title'  => '<h3 class="widget-title">',
-    'after_title'   => '</h3>',
+        'after_widget'  => '</aside>',
+        'before_title'  => '<h3 class="widget-title">',
+        'after_title'   => '</h3>',
     ) );
+
+    register_sidebar( array(
+        'name' => 'Blog Sidebar',
+        'id' => 'blog-sidebar',
+        'description' => 'Widgets in this area will be shown on blog pages.',
+        'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+        'after_widget'  => '</aside>',
+        'before_title'  => '<h3 class="widget-title">',
+        'after_title'   => '</h3>',
+    ) );
+
 }
 

@@ -73,8 +73,9 @@ h1, h2, h3, h4, h5 {
 }
 
 .headerCTA {
-	background: $brand-primary;
+	background: $brand-secondary;
 	@include shadow;
+	border: 0;
 }
 
 /* Pages
@@ -96,7 +97,7 @@ h1, h2, h3, h4, h5 {
     font-weight: bold;
     font-size: 8vh;
     color: #fff;
-    background: #ff7900;
+    background: $brand-primary;
     text-transform: uppercase;
     margin-bottom: 0;
     padding: 50px 0;
@@ -325,6 +326,52 @@ h1, h2, h3, h4, h5 {
 }
    }
 
+/* Blog
+   ========================================================================== */
+
+   #blog-sidebar {
+	
+	.assistive-text {
+		display: none;
+	}
+
+	.widget_categories ul {
+		padding-left: 0;
+
+		li {
+		padding-left: 25px;
+		text-transform: uppercase;
+		list-style: none;
+		margin-bottom: 5px;
+		}
+	}
+
+		.widget_recent_entries ul {
+			padding-left: 0;
+
+			li {
+			padding-left: 25px;
+    		list-style: none;
+    		margin-bottom: 10px;
+		}
+	}
+
+	.widget {
+		margin-bottom: 50px;
+
+		.widget-title {
+			background: #ff7900;
+		    color: #fff;
+		    padding: 5px 10px;
+		}
+	}
+   }
+
+   #blogPagination {
+   	margin: 0 auto;
+   	margin-top: 50px;
+   }
+
 /* Forms
    ========================================================================== */
 
@@ -341,37 +388,6 @@ h1, h2, h3, h4, h5 {
 	opacity: .9;
 	color: #fff !important;
 }
-
-/* Sidebar
-   ========================================================================== */
-
-   #sidebarContact {
-
-	   	.contact_info {
-		    padding-left: 1.5em;
-		    position: relative;
-		    margin-bottom: .5em;
-	   	}
-
-	   	&:before {
-	   		font-family: "FontAwesome";
-		    position: absolute;
-		    top: 0;
-		    left: 0;
-		}
-
-		#email:before {
-			content: "\f0e0";
-		}
-
-		#phone:before {
-			content: "\f095";
-		}
-
-		#address:before {
-			content: "\f041";
-		}
-   }
 
 /* Footer
    ========================================================================== */

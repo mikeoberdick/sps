@@ -9484,10 +9484,11 @@ h1, h2, h3, h4, h5 {
   left: 0; }
 
 .headerCTA {
-  background: #3c83bb;
+  background: #ff7d14;
   -webkit-box-shadow: 0 8px 6px -6px black;
   -moz-box-shadow: 0 8px 6px -6px black;
-  box-shadow: 0 8px 6px -6px black; }
+  box-shadow: 0 8px 6px -6px black;
+  border: 0; }
 
 /* Pages
    ========================================================================== */
@@ -9505,7 +9506,7 @@ h1, h2, h3, h4, h5 {
   font-weight: bold;
   font-size: 8vh;
   color: #fff;
-  background: #ff7900;
+  background: #3c83bb;
   text-transform: uppercase;
   margin-bottom: 0;
   padding: 50px 0; }
@@ -9679,6 +9680,37 @@ h1, h2, h3, h4, h5 {
       .gallery_images .gallery_thumb a:hover {
         border-color: #ff7d14; }
 
+/* Blog
+   ========================================================================== */
+#blog-sidebar .assistive-text {
+  display: none; }
+
+#blog-sidebar .widget_categories ul {
+  padding-left: 0; }
+  #blog-sidebar .widget_categories ul li {
+    padding-left: 25px;
+    text-transform: uppercase;
+    list-style: none;
+    margin-bottom: 5px; }
+
+#blog-sidebar .widget_recent_entries ul {
+  padding-left: 0; }
+  #blog-sidebar .widget_recent_entries ul li {
+    padding-left: 25px;
+    list-style: none;
+    margin-bottom: 10px; }
+
+#blog-sidebar .widget {
+  margin-bottom: 50px; }
+  #blog-sidebar .widget .widget-title {
+    background: #ff7900;
+    color: #fff;
+    padding: 5px 10px; }
+
+#blogPagination {
+  margin: 0 auto;
+  margin-top: 50px; }
+
 /* Forms
    ========================================================================== */
 .nf-form-content {
@@ -9691,28 +9723,6 @@ h1, h2, h3, h4, h5 {
 .nf-form-content input[type="submit"]:hover, .nf-form-content input[type="button"]:hover, .nf-form-content button:hover {
   opacity: .9;
   color: #fff !important; }
-
-/* Sidebar
-   ========================================================================== */
-#sidebarContact .contact_info {
-  padding-left: 1.5em;
-  position: relative;
-  margin-bottom: .5em; }
-
-#sidebarContact:before {
-  font-family: "FontAwesome";
-  position: absolute;
-  top: 0;
-  left: 0; }
-
-#sidebarContact #email:before {
-  content: "\f0e0"; }
-
-#sidebarContact #phone:before {
-  content: "\f095"; }
-
-#sidebarContact #address:before {
-  content: "\f041"; }
 
 /* Footer
    ========================================================================== */
