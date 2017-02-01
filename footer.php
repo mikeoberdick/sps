@@ -40,7 +40,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 									<a href = "<?php the_field('google_plus', 'option'); ?>"><i class="fa fa-google-plus-square" aria-hidden="true"></i></a>
 								</div>				
 								<p class = "text-center"><?php the_field('company_address', 'option'); ?></p>
-								<p class = "text-center">&copy; <?php echo date('Y'); ?> <span class="sep"> | </span> Website by <a href = "http://www.designs4theweb.com">Designs 4 The Web</a></p>
+								<p class = "text-center">&copy; <?php echo date('Y');  ?> <?php $blog_title = get_bloginfo( 'name' ); echo $blog_title; ?> <span class="sep"> | </span> Website by <a href = "http://www.designs4theweb.com">Designs 4 The Web</a></p>
 							</div>
 						</div>
 

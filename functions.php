@@ -28,6 +28,13 @@ function google_fonts_styles() {
 }
 add_action( 'wp_enqueue_scripts', 'google_fonts_styles' );
 
+// Add the Mix It Up (filterable portfolio) files
+function sps_miu_js() {
+    wp_enqueue_script( 'MIU Theme JS', get_stylesheet_directory_uri() . '/miu/miu.js', array('jquery'), '1.0.0', true );
+    wp_enqueue_script( 'MIU JS', get_stylesheet_directory_uri() . '/miu/jquery.mixitup.min.js', array('jquery'), '1.0.0', true );
+}
+add_action( 'wp_enqueue_scripts', 'sps_miu_js' );
+
 // Add the styles and scripts for Owl Carousel
 function oc_scripts_and_styles() {
 	if( is_page ( 'homepage') ) {
@@ -78,7 +85,7 @@ function sps_sidebars() {
         'name' => 'Contact Sidebar',
         'id' => 'contact-sidebar',
         'description' => 'Widgets in this area will be shown on all all contact pages.',
-        'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+        'before_widget' => '<aside id="%1$s contact_sidebar" class="widget %2$s">',
         'after_widget'  => '</aside>',
         'before_title'  => '<h3 class="widget-title">',
         'after_title'   => '</h3>',
@@ -88,11 +95,39 @@ function sps_sidebars() {
         'name' => 'Blog Sidebar',
         'id' => 'blog-sidebar',
         'description' => 'Widgets in this area will be shown on blog pages.',
-        'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+        'before_widget' => '<aside id="%1$s blog_sidebar" class="widget %2$s">',
         'after_widget'  => '</aside>',
         'before_title'  => '<h3 class="widget-title">',
         'after_title'   => '</h3>',
     ) );
 
 }
+
+// Register the custom taxonomy for attachments
+function sps_add_img_tag_taxonomy() {
+    $labels = array(
+        'name'              => 'Image Tag',
+        'singular_name'     => 'Image Tag',
+        'search_items'      => 'Search Image Tags',
+        'all_items'         => 'All Image Tags',
+        'parent_item'       => 'Parent Image Tag',
+        'parent_item_colon' => 'Parent Image Tag:',
+        'edit_item'         => 'Edit Image Tag',
+        'update_item'       => 'Update Image Tag',
+        'add_new_item'      => 'Add New Image Tag',
+        'new_item_name'     => 'New Image Tag Name',
+        'menu_name'         => 'Image Tag',
+    );
+ 
+    $args = array(
+        'labels' => $labels,
+        'hierarchical' => false,
+        'query_var' => 'true',
+        'rewrite' => 'true',
+        'show_admin_column' => 'true',
+    );
+ 
+    register_taxonomy( 'image_tag', 'attachment', $args );
+}
+add_action( 'init', 'sps_add_img_tag_taxonomy' );
 

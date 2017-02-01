@@ -31,6 +31,13 @@ h1, h2, h3, h4, h5 {
 
 /* Header
    ========================================================================== */
+.navbar .container {
+	width: 100%
+}
+
+#main-menu {
+	margin-left: 50px;
+}
 
 .navbar-inverse .navbar-nav .nav-link, .navbar-inverse .navbar-nav .nav-link:focus, .navbar-inverse .navbar-nav .nav-link:hover{
 	color: $brand-primary;
@@ -45,7 +52,7 @@ h1, h2, h3, h4, h5 {
 }
 
 .bg-inverse {
-	background-image: url('/wp-content/themes/understrap-child-master/img/header_bg.jpg');
+	background-image: url('/img/header_bg.jpg');
 	background-size: cover;
 	background-color: transparent !important;
 	border-bottom: solid 5px $brand-primary;
@@ -80,6 +87,8 @@ h1, h2, h3, h4, h5 {
 	background: $brand-secondary;
 	@include shadow;
 	border: 0;
+	padding: 15px;
+	margin-right: 50px;
 }
 
 /* Pages
@@ -237,7 +246,7 @@ h1, h2, h3, h4, h5 {
 			content: '';
 			width: 50px;
 			height:50px;
-			background-image: url('/wp-content/themes/understrap-child-master/img/quote_bg.png');
+			background-image: url('/img/quote_bg.png');
 			background-size: contain;
 			background-repeat: no-repeat;
 			opacity: .2;
@@ -277,7 +286,7 @@ h1, h2, h3, h4, h5 {
 				&:before {
 				    content: "";
 				    background-color: #fff;
-				    background-image: url('/wp-content/themes/understrap-child-master/img/orange_quote_bg.png');
+				    background-image: url('/img/orange_quote_bg.png');
 				    background-size: contain;
 					background-repeat: no-repeat;
 					background-size: 25px;
@@ -342,8 +351,18 @@ h1, h2, h3, h4, h5 {
 		text-transform: uppercase;
 		list-style: none;
 		margin-bottom: 5px;
-		}
+
+		a {
+		background: #3c83bb;
+	    color: #fff;
+	    padding: 5px 10px;
+	    @include border-radius(5px);
+	    display: inline-block;
+	    margin-bottom: 5px;
 	}
+
+	}
+}
 
 		.widget_recent_entries ul {
 			padding-left: 0;
@@ -389,6 +408,21 @@ h1, h2, h3, h4, h5 {
 	color: #fff !important;
 }
 
+
+/* Sidebars
+   ========================================================================== */
+#sidebar_logo {
+	width: 200px;
+}
+
+.fa {
+	color: $brand-secondary;
+}
+
+.widget:not(:first-child) {
+    margin-top: 50px;
+}
+
 /* Footer
    ========================================================================== */
 
@@ -408,3 +442,63 @@ h1, h2, h3, h4, h5 {
 #footerLogo {
 	height: 100px;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+#filters {
+	margin:1%;
+	padding:0;
+	list-style:none;
+}
+
+	#filters li {
+		float:left;
+	}
+	
+	#filters li span {
+		display: block;
+		padding:5px 20px;		
+		text-decoration:none;
+		color:#666;
+		cursor: pointer;
+	}
+	
+	#filters li span.active {
+		background: $brand-secondary;
+		color:#fff;
+	}
+ 
+
+ 
+#portfoliolist .portfolio {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	width:23%;
+	margin:1%;
+	display:none;
+	float:left;
+	overflow:hidden;
+}
+
+	.portfolio-wrapper {
+		overflow:hidden;
+		position: relative !important;
+		background: #666;
+		cursor:pointer;
+	}
+
+	.portfolio img {
+		max-width:100%;
+		position: relative;
+		top:0;	
+	}
