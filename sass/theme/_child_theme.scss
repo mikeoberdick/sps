@@ -35,17 +35,52 @@ h1, h2, h3, h4, h5 {
 	width: 100%
 }
 
-#main-menu {
-	margin-left: 50px;
+@media (max-width: 991px) {
+
+	.bg-inverse {
+		text-align: center;
+		background-image: none !important;
+		background-color: #dedede !important;
+	}
+
+	.headerCTA {
+		display: block;
+		margin: 0 auto !important;
+		max-width: 300px;
+	}
+
+}
+
+@media (min-width: 992px) {
+		#main-menu {
+	margin-left: 0;
+}
 }
 
 .navbar-inverse .navbar-nav .nav-link, .navbar-inverse .navbar-nav .nav-link:focus, .navbar-inverse .navbar-nav .nav-link:hover{
 	color: $brand-primary;
 }
 
+.navbar-brand img {
+	width: 200px;
+}
+
+.navbar-inverse .navbar-toggler {
+    background: #3c83bb;
+}
+
 .bg-inverse .dropdown-menu {
 	background-color: #fff;
 }
+
+@media (max-width: 991px) {
+.bg-inverse .dropdown-menu {
+	width: 100%;
+    float: left;
+    text-align: center;
+    border-color: #ff7d14;
+}
+    }
 
 .navbar-inverse .navbar-nav .nav-link:hover, .navbar-inverse .navbar-nav .active>.nav-link, .navbar-inverse .navbar-nav .nav-link.active, .navbar-inverse .navbar-nav .nav-link.open, .navbar-inverse .navbar-nav .open>.nav-link {
 	color: $brand-primary;
@@ -54,7 +89,7 @@ h1, h2, h3, h4, h5 {
 .bg-inverse {
 	background-image: url('/img/header_bg.jpg');
 	background-size: cover;
-	background-color: transparent !important;
+	background-color: transparent;
 	border-bottom: solid 5px $brand-primary;
 	@include shadow;
 }
@@ -69,8 +104,10 @@ h1, h2, h3, h4, h5 {
 			background: #fff !important;
 		}
 	}
-	
-	:before {
+}
+
+@media (min-width: 992px) {
+.dropdown-menu:before {
 		width: 0;
 	    height: 0;
 	    border-left: 25px solid transparent;
@@ -108,7 +145,7 @@ h1, h2, h3, h4, h5 {
 .entry-title {
 	text-align: center;
     font-weight: bold;
-    font-size: 8vh;
+    font-size: 5vh;
     color: #fff;
     background: $brand-primary;
     text-transform: uppercase;
@@ -123,16 +160,24 @@ h1, h2, h3, h4, h5 {
 	padding-top: 0;
 }
 
+@media (min-width: 992px) {
+
 .slider_wrapper {
 	height: 450px;
-    background: $brand-primary;
     margin-left: -50px;
     margin-right: -50px;
     margin-bottom: 50px;
 
+    img {
+    	height: 450px;
+	    }
+	}
+}
+
     .slide_content {
-    	padding: 50px;
+    	padding: 50px !important;
     	color: #fff;
+    	background: $brand-primary;
 
     	h3 {
     		color: #fff;
@@ -155,11 +200,6 @@ h1, h2, h3, h4, h5 {
 			    }
 	    	}
     }
-
-    img {
-    	height: 450px;
-    	}
-}
 
 .sectionWrap {
 	    margin-top: 25px;
@@ -408,19 +448,52 @@ h1, h2, h3, h4, h5 {
 	color: #fff !important;
 }
 
+.btn-secondary {
+	background-color: $brand-secondary;
+	border: 0;
+	color: #fff;
+
+	&:hover {
+		background-color: $brand-primary;
+		color: #fff;
+	}
+}
+
+
+
 
 /* Sidebars
    ========================================================================== */
-#sidebar_logo {
-	width: 200px;
-}
+.contact_sidebar {
 
-.fa {
-	color: $brand-secondary;
-}
+	.textwidget:first-child {
+	background: #eeeeee;
+    text-align: center;
+    padding: 15px;
+    border-radius: 5px;
+	}
 
-.widget:not(:first-child) {
-    margin-top: 50px;
+	button {
+		margin-top: 25px;
+	}
+
+	#sidebar_logo {
+	width: 150px;
+	}
+
+	#sbContactInfo {
+	margin-top: 15px;
+	}
+
+	.fa {
+		margin-right: 5px;
+		color: $brand-secondary;
+	}
+
+	.widget:not(:first-child) {
+    margin-top: 35px;
+	}
+	
 }
 
 /* Footer
@@ -443,19 +516,7 @@ h1, h2, h3, h4, h5 {
 	height: 100px;
 }
 
-
-
-
-
-
-
-
-
-
-
-
 #filters {
-	margin:1%;
 	padding:0;
 	list-style:none;
 }
@@ -468,8 +529,11 @@ h1, h2, h3, h4, h5 {
 		display: block;
 		padding:5px 20px;		
 		text-decoration:none;
-		color:#666;
+		background: $brand-primary;
+		color:#fff;
 		cursor: pointer;
+		margin-right: 10px;
+		margin-bottom: 15px;
 	}
 	
 	#filters li span.active {
@@ -483,7 +547,6 @@ h1, h2, h3, h4, h5 {
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	-o-box-sizing: border-box;
-	width:23%;
 	margin:1%;
 	display:none;
 	float:left;
@@ -495,6 +558,7 @@ h1, h2, h3, h4, h5 {
 		position: relative !important;
 		background: #666;
 		cursor:pointer;
+		padding: 0;
 	}
 
 	.portfolio img {

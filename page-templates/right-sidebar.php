@@ -59,10 +59,18 @@ $container   = get_theme_mod( 'understrap_container_type' ); ?>
 			<div class = "col-md-4">
 
 				<?php if ( is_active_sidebar( 'contact-sidebar' ) ) : ?>
-					<aside id="sidebar">
+					<aside id="sidebar" class = "contact_sidebar">
 					<?php dynamic_sidebar( 'contact-sidebar' ); ?>
+						<aside class="widget widget_text">
+							<h3 class="widget-title">Latest Project</h3>
+							<div>
+								<img src = "<?php the_field('recent_project', 'options'); ?>" />
+								<a href="/gallery-of-work"><button type="button" class="btn btn-primary btn-lg btn-block">Full Portfolio</button></a>
+							</div>
+						</aside>
 					</aside>
 				<?php endif; ?>
+
 			</div>
 
 	</div><!-- .row -->

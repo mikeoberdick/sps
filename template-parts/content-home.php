@@ -5,12 +5,12 @@
         while (have_rows('slider_info', 'option')) : the_row();
             ?>
             <div class = " row hp_slider no-gutters" class = "item">
-                <div class = "col-md-4 slide_content">
+                <div class = "col-md-12 col-lg-4 slide_content">
                     <h3><?php the_sub_field('slide_title'); ?></h3>
                     <p><?php the_sub_field('slide_text'); ?></p>
                     <a href = "<?php the_sub_field('slide_link'); ?>" role = "button">Learn More</a>
                 </div>
-                <div class = "col-md-8 slide_image">
+                <div class = "col-lg-8 hidden-md-down slide_image">
                 <img src = "<?php the_sub_field('slide_image'); ?>">
                 </div>
             </div>

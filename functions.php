@@ -18,6 +18,7 @@ function theme_enqueue_styles() {
 
     wp_enqueue_style( 'child-understrap-styles', get_stylesheet_directory_uri() . '/css/child-theme.min.css', array(), $the_theme->get( 'Version' ) );
     wp_enqueue_script( 'child-understrap-scripts', get_stylesheet_directory_uri() . '/js/child-theme.min.js', array(), $the_theme->get( 'Version' ), true );
+    wp_enqueue_script( 'SPS Theme JS', get_stylesheet_directory_uri() . '/js/sps_theme.js', array('jquery'), '1.0.0', true );
 }
 
 // Add the styles and for Google Fonts
@@ -85,7 +86,7 @@ function sps_sidebars() {
         'name' => 'Contact Sidebar',
         'id' => 'contact-sidebar',
         'description' => 'Widgets in this area will be shown on all all contact pages.',
-        'before_widget' => '<aside id="%1$s contact_sidebar" class="widget %2$s">',
+        'before_widget' => '<aside id="%1$s" class="widget %2$s">',
         'after_widget'  => '</aside>',
         'before_title'  => '<h3 class="widget-title">',
         'after_title'   => '</h3>',
@@ -95,13 +96,14 @@ function sps_sidebars() {
         'name' => 'Blog Sidebar',
         'id' => 'blog-sidebar',
         'description' => 'Widgets in this area will be shown on blog pages.',
-        'before_widget' => '<aside id="%1$s blog_sidebar" class="widget %2$s">',
+        'before_widget' => '<aside id="%1$s" class="widget %2$s">',
         'after_widget'  => '</aside>',
         'before_title'  => '<h3 class="widget-title">',
         'after_title'   => '</h3>',
     ) );
 
 }
+
 
 // Register the custom taxonomy for attachments
 function sps_add_img_tag_taxonomy() {
@@ -130,4 +132,3 @@ function sps_add_img_tag_taxonomy() {
     register_taxonomy( 'image_tag', 'attachment', $args );
 }
 add_action( 'init', 'sps_add_img_tag_taxonomy' );
-

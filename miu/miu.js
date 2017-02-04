@@ -12,7 +12,7 @@ jQuery(function () {
   			  filter: '.filter'	
   		  },
   		  load: {
-    		  filter: '.app' // show all on first load
+    		  filter: '.all' // show all on first load
     		}     
 			});								
 		

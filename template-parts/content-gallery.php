@@ -8,38 +8,47 @@
 
 </article><!-- #post-## -->
 
+<?php 
+
+    $terms = get_terms([
+    'taxonomy' => 'image_tag',
+    'hide_empty' => false,
+]); ?>
+
 <ul id="filters" class="clearfix">
-    <li><span class="filter active" data-filter=".app, .card, .icon, .logo, .web">All</span></li>
-    <li><span class="filter" data-filter=".app">App</span></li>
-    <li><span class="filter" data-filter=".card">Card</span></li>
-    <li><span class="filter" data-filter=".icon">Icon</span></li>
-    <li><span class="filter" data-filter=".logo">Logo</span></li>
-    <li><span class="filter" data-filter=".web">Web</span></li>
+<li><span class="filter" data-filter=".all">All Images</span></li>
+<?php foreach ( $terms as $term) {
+
+?>
+
+<li><span class="filter" data-filter=".<?php echo $term->slug; ?>"><?php echo $term->name; ?></span></li>
+<?php 
+    }
+?>
 </ul>
 
-
-<div id="portfoliolist">
-  <div class="portfolio logo" data-cat="logo">
-    <div class="portfolio-wrapper">
-      <img src="http://lorempixel.com/150/150/" alt="" />
-    </div>
-  </div>
-</div>
-
 <?php
-/*
 
 $images = get_field('gallery', 'option');
 
 if( $images ): ?>
-    <div class = "row gallery_images">
-        <?php foreach( $images as $image ): ?>
-            <div class = "col-sm-2 gallery_thumb" data-aos="fade-up" data-cat="image_tag">
-                <a class = "gallery" href="<?php echo $image['url']; ?>" data-featherlight="image">
-                     <img src="<?php echo $image['sizes']['thumbnail']; ?>" alt="<?php echo $image['alt']; ?>" />
-                </a>
-            </div>
+
+<div id="portfoliolist" class = "row">
+
+
+
+<?php foreach( $images as $image ): ?>
+
+<?php $terms = wp_get_post_terms($image['ID'], 'image_tag'); ?>
+
+
+<div class="portfolio all <?php foreach( $terms as $term ): ?><?php echo $term->slug; ?> <?php endforeach; ?>" data-cat="all <?php foreach( $terms as $term ): ?><?php echo $term->slug; ?> <?php endforeach; ?>">
+    <div class="portfolio-wrapper col-sm-12">
+      <a href="<?php echo $image['url']; ?>" data-featherlight="image"><img src="<?php echo $image['sizes']['thumbnail']; ?>" alt="<?php echo $image['alt']; ?>" /></a>
+    </div>
+  </div>
         <?php endforeach; ?>
     </div>
 <?php endif; ?>
-*/
+
+<!-- <?php echo get_post_meta( $image['id'], 'image_tag', true ); ?> -->
