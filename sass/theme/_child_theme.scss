@@ -45,7 +45,7 @@ h1, h2, h3, h4, h5 {
 
 	.headerCTA {
 		display: block;
-		margin: 0 auto !important;
+		margin: 10px auto !important;
 		max-width: 300px;
 	}
 
@@ -73,6 +73,10 @@ h1, h2, h3, h4, h5 {
 	background-color: #fff;
 }
 
+#socialLinks {
+	font-size: 5vh;
+	}
+
 @media (max-width: 991px) {
 .bg-inverse .dropdown-menu {
 	width: 100%;
@@ -87,10 +91,10 @@ h1, h2, h3, h4, h5 {
 }
 
 .bg-inverse {
-	background-image: url('/img/header_bg.jpg');
+	background-image: url('http://www.dev.designs4theweb.com/sps/img/header_bg.jpg');
 	background-size: cover;
 	background-color: transparent;
-	border-bottom: solid 5px $brand-primary;
+	//border-bottom: solid 5px $brand-primary;
 	@include shadow;
 }
 
@@ -107,6 +111,7 @@ h1, h2, h3, h4, h5 {
 }
 
 @media (min-width: 992px) {
+
 .dropdown-menu:before {
 		width: 0;
 	    height: 0;
@@ -118,6 +123,15 @@ h1, h2, h3, h4, h5 {
 	    top: -10px;
 	    left: 0;
 	}
+
+.navbar-toggleable-md .navbar-collapse {
+		width: auto;
+		margin-right: 35px;
+	}
+
+	#socialLinks {
+		margin-right: 35px;
+	}
 }
 
 .headerCTA {
@@ -125,7 +139,6 @@ h1, h2, h3, h4, h5 {
 	@include shadow;
 	border: 0;
 	padding: 15px;
-	margin-right: 50px;
 }
 
 /* Pages
@@ -286,7 +299,7 @@ h1, h2, h3, h4, h5 {
 			content: '';
 			width: 50px;
 			height:50px;
-			background-image: url('/img/quote_bg.png');
+			background-image: url('/http://www.dev.designs4theweb.com/sps/img/quote_bg.png');
 			background-size: contain;
 			background-repeat: no-repeat;
 			opacity: .2;
@@ -326,7 +339,7 @@ h1, h2, h3, h4, h5 {
 				&:before {
 				    content: "";
 				    background-color: #fff;
-				    background-image: url('/img/orange_quote_bg.png');
+				    background-image: url('http://www.dev.designs4theweb.com/sps/img/orange_quote_bg.png');
 				    background-size: contain;
 					background-repeat: no-repeat;
 					background-size: 25px;
@@ -486,7 +499,7 @@ h1, h2, h3, h4, h5 {
 	}
 
 	.fa {
-		margin-right: 5px;
+		margin-right: 10px;
 		color: $brand-secondary;
 	}
 

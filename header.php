@@ -67,6 +67,12 @@ $container = get_theme_mod( 'understrap_container_type' );
 					)
 				); ?>
 
+				<div id = "socialLinks">
+					<a href = "<?php the_field('facebook', 'option'); ?>"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+					<a href = "<?php the_field('twitter', 'option'); ?>"><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
+					<a href = "<?php the_field('google_plus', 'option'); ?>"><i class="fa fa-google-plus-square" aria-hidden="true"></i></a>
+				</div>
+
 				<a class="btn btn-primary headerCTA" href="/get-a-quote/">Get A Quote</a>
 
 			</div><!-- .container -->
