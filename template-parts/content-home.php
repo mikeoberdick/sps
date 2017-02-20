@@ -5,13 +5,8 @@
         while (have_rows('slider_info', 'option')) : the_row();
             ?>
             <div class = " row hp_slider no-gutters" class = "item">
-                <div class = "col-md-12 col-lg-4 slide_content">
-                    <h3><?php the_sub_field('slide_title'); ?></h3>
-                    <p><?php the_sub_field('slide_text'); ?></p>
-                    <a href = "<?php the_sub_field('slide_link'); ?>" role = "button">Learn More</a>
-                </div>
-                <div class = "col-lg-8 hidden-md-down slide_image">
-                <img src = "<?php the_sub_field('slide_image'); ?>">
+                <div>
+                <a href = "<?php the_sub_field('slide_link'); ?>"><img class = "img-responsive" src = "<?php the_sub_field('slide_image'); ?>"></a>
                 </div>
             </div>
 
@@ -43,18 +38,25 @@
     endif;
     ?>
 </div>
+</div>
+</div>
+</div><!-- close the container -->
 
-<div class = "container">
-    <div class = "row cta">
+<div class = "container-fluid cta">
+    <div class = "container">
+    <div class = "row">
         <div class = "col-md-9 cta_info">
             <h3><?php the_field('call_to_action_heading', 'option'); ?></h3>
             <p><?php the_field('call_to_action_text', 'option'); ?></p>
         </div>
         <div class = "col-md-3 cta_link">
-            <a href = "<?php the_field('call_to_action_link', 'option'); ?>" role = "button">Learn More</a>
+            <a href = "<?php the_field('call_to_action_link', 'option'); ?>" role = "button"><?php the_field('call_to_action_link_text', 'option'); ?></a>
+        </div>
         </div>
     </div>
 </div>
+
+<div class="container" id="content">
 
 <h1>Testimonials</h1>
 

@@ -9452,7 +9452,8 @@ h1, h2, h3, h4, h5 {
 /* Header
    ========================================================================== */
 .navbar .container {
-  width: 100%; }
+  width: 100%;
+  justify-content: center; }
 
 @media (max-width: 991px) {
   .bg-inverse {
@@ -9819,6 +9820,9 @@ h1, h2, h3, h4, h5 {
 
 #footerLogo {
   height: 100px; }
+
+.tagline {
+  text-transform: uppercase; }
 
 #filters {
   padding: 0;

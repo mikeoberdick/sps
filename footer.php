@@ -33,7 +33,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 						
 						<div class = "row">
 							<div class = "col-sm-12">
-								<p class = "text-center"><?php the_field('company_tagline', 'option'); ?></p>
+								<p class = "text-center tagline"><?php the_field('company_tagline', 'option'); ?></p>
 								<div class = "text-center">
 									<a href = "<?php the_field('facebook', 'option'); ?>"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
 									<a href = "<?php the_field('twitter', 'option'); ?>"><i class="fa fa-twitter-square" aria-hidden="true"></i></a>

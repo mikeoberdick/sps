@@ -48,12 +48,3 @@ jQuery("#testimonialCarousel").owlCarousel({
 });
 
 });
-
-
-
-	jQuery(document).ready(function(){
-		
-		jQuery(".gallery").featherlightGallery();
-
-		AOS.init();
-		});
