@@ -9428,7 +9428,11 @@ aside.widget {
 /* General
    ========================================================================== */
 body {
-  font-family: 'Open Sans', sans-serif; }
+  font-family: 'Open Sans', sans-serif;
+  background-color: #eee; }
+
+hr {
+  border-color: #ff7d14; }
 
 .hp_wrapper {
   margin-top: 50px; }
@@ -9437,10 +9441,6 @@ body {
   padding-top: 0;
   padding-bottom: 100px;
   background: #eee; }
-
-#content {
-  padding: 50px;
-  background: #fff; }
 
 a {
   text-decoration: none !important; }
@@ -9554,6 +9554,9 @@ h1, h2, h3, h4, h5 {
   margin-bottom: 0;
   padding: 50px 0; }
 
+.entry-content {
+  margin-top: 50px; }
+
 /* Homepage
    ========================================================================== */
 .home #content {
@@ -9594,7 +9597,8 @@ h1, h2, h3, h4, h5 {
     padding: 25px;
     height: 100%;
     border: 2px solid #ddd;
-    margin-top: 25px; }
+    margin-top: 25px;
+    background-color: #fff; }
     .sectionWrap .hp_section h3 {
       text-align: center;
       margin-bottom: 15px; }
@@ -9617,15 +9621,21 @@ h1, h2, h3, h4, h5 {
   height: 150px;
   align-items: center; }
 
+@media (max-width: 768px) {
+  .cta {
+    text-align: center; }
+    .cta a {
+      margin-top: 25px; } }
+
 .cta {
-  padding: 50px 25px 50px 50px;
+  padding: 50px 25px 50px 25px;
   background: #ff7d14;
   background: -webkit-linear-gradient(left, #ff7900, #feae65);
   background: -o-linear-gradient(right, #ff7900, #feae65);
   background: -moz-linear-gradient(right, #ff7900, #feae65);
   background: linear-gradient(to right, #ff7900, #feae65);
   color: #fff;
-  margin: 50px -65px; }
+  margin: 50px auto; }
   .cta h3 {
     color: #fff;
     font-weight: bold; }
@@ -9785,7 +9795,7 @@ h1, h2, h3, h4, h5 {
 /* Sidebars
    ========================================================================== */
 .contact_sidebar .textwidget:first-child {
-  background: #eeeeee;
+  background: #eee;
   text-align: center;
   padding: 15px;
   border-radius: 5px; }

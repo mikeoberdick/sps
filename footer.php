@@ -11,8 +11,6 @@ $the_theme = wp_get_theme();
 $container = get_theme_mod( 'understrap_container_type' );
 ?>
 
-<?php get_sidebar( 'footerfull' ); ?>
-
 <div class="wrapper" id="wrapper-footer">
 
 	<div class="<?php echo esc_html( $container ); ?>">
@@ -38,9 +36,13 @@ $container = get_theme_mod( 'understrap_container_type' );
 									<a href = "<?php the_field('facebook', 'option'); ?>"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
 									<a href = "<?php the_field('twitter', 'option'); ?>"><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
 									<a href = "<?php the_field('google_plus', 'option'); ?>"><i class="fa fa-google-plus-square" aria-hidden="true"></i></a>
-								</div>				
-								<p class = "text-center"><?php the_field('company_address', 'option'); ?></p>
-								<p class = "text-center">&copy; <?php echo date('Y');  ?> <?php $blog_title = get_bloginfo( 'name' ); echo $blog_title; ?> <span class="sep"> | </span> Website by <a href = "http://www.designs4theweb.com">Designs 4 The Web</a></p>
+								</div>
+								<div class = "text-center">		
+								<p><?php the_field('company_address', 'option'); ?></p>
+								<p><a href = "tel:<?php the_field('company_phone', 'option'); ?>"><?php the_field('company_phone', 'option'); ?></a></p>
+								<p><?php the_field('footer_towns', 'option'); ?></p>
+								<p>&copy; <?php echo date('Y');  ?> <?php $blog_title = get_bloginfo( 'name' ); echo $blog_title; ?> <span class="sep"> | </span> Website by <a href = "http://www.designs4theweb.com">Designs 4 The Web</a></p>
+								</div>
 							</div>
 						</div>
 

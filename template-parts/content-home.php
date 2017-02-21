@@ -6,7 +6,7 @@
             ?>
             <div class = " row hp_slider no-gutters" class = "item">
                 <div>
-                <a href = "<?php the_sub_field('slide_link'); ?>"><img class = "img-responsive" src = "<?php the_sub_field('slide_image'); ?>"></a>
+                <a href = "<?php the_sub_field('slide_link'); ?>"><img src = "<?php the_sub_field('slide_image'); ?>"></a>
                 </div>
             </div>
 

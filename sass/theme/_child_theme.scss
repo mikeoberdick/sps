@@ -3,7 +3,12 @@
 
 body {
 	font-family: 'Open Sans', sans-serif;
+	background-color: $bg-color;
 }
+
+hr {
+	border-color: $brand-secondary;
+	}
 
 .hp_wrapper {
 	margin-top: 50px;
@@ -12,12 +17,7 @@ body {
 .wrapper {
 	padding-top: 0;
 	padding-bottom: 100px;
-	background: #eee;
-}
-
-#content {
-	padding: 50px;
-    background: #fff;
+	background: $bg-color;
 }
 
 a {
@@ -167,6 +167,10 @@ h1, h2, h3, h4, h5 {
     padding: 50px 0;
 }
 
+.entry-content {
+	margin-top: 50px;
+}
+
 /* Homepage
    ========================================================================== */
 
@@ -223,6 +227,7 @@ h1, h2, h3, h4, h5 {
 		height: 100%;
 	    border: 2px solid #ddd;
 	    margin-top: 25px;
+	    background-color: #fff;
 
 	    h3 {
 	    	text-align: center;
@@ -254,15 +259,25 @@ h1, h2, h3, h4, h5 {
     align-items: center;	
 }
 
+@media (max-width: 768px) {
+	.cta {
+		text-align: center;
+
+		a {
+			margin-top: 25px;
+		}
+	}
+	}
+
 .cta {
-    padding: 50px 25px 50px 50px;
-        background: $brand-secondary;
+    padding: 50px 25px 50px 25px;
+    background: $brand-secondary;
     background: -webkit-linear-gradient(left, #ff7900 , #feae65);
     background: -o-linear-gradient(right, #ff7900, #feae65);
     background: -moz-linear-gradient(right, #ff7900, #feae65);
     background: linear-gradient(to right, #ff7900 , #feae65);
     color: #fff;
-    margin: 50px -65px;
+    margin: 50px auto;
 
     h3 {
     	color: #fff;
@@ -481,7 +496,7 @@ h1, h2, h3, h4, h5 {
 .contact_sidebar {
 
 	.textwidget:first-child {
-	background: #eeeeee;
+	background: $bg-color;
     text-align: center;
     padding: 15px;
     border-radius: 5px;
@@ -512,7 +527,6 @@ h1, h2, h3, h4, h5 {
 
 /* Footer
    ========================================================================== */
-
 #wrapper-footer {
 	background-color: $brand-primary;
 	color: #fff;

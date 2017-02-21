@@ -16,7 +16,6 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 <?php if( is_page( 'homepage' ) ) {
     	echo '<div class="hp_wrapper" id="full-width-page-wrapper">';
-
     }
 
     else {
@@ -24,7 +23,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 		}
 
 	if( !is_page( 'homepage' ) ) {
-		echo '<header class="entry-header">' . the_title( '<h1 class="entry-title">', '</h1>' ); '</header><!-- .entry-header -->';
+		echo '<header class="entry-header">' . the_title( '<h1 class="entry-title">', '</h1>' ) . '</header><!-- .entry-header -->';
 	}
 ?>
 
