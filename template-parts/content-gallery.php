@@ -42,9 +42,9 @@ if( $images ): ?>
 <?php $terms = wp_get_post_terms($image['ID'], 'image_tag'); ?>
 
 
-<div class="portfolio all <?php foreach( $terms as $term ): ?><?php echo $term->slug; ?> <?php endforeach; ?>" data-cat="all <?php foreach( $terms as $term ): ?><?php echo $term->slug; ?> <?php endforeach; ?>">
-    <div class="portfolio-wrapper col-sm-12">
-      <a href="<?php echo $image['url']; ?>" data-featherlight="image"><img src="<?php echo $image['sizes']['thumbnail']; ?>" alt="<?php echo $image['alt']; ?>" /></a>
+<div class="col-xs-12 col-sm-6 col-lg-3 portfolio all <?php foreach( $terms as $term ): ?><?php echo $term->slug; ?> <?php endforeach; ?>" data-cat="all <?php foreach( $terms as $term ): ?><?php echo $term->slug; ?> <?php endforeach; ?>" style = "flex-basis: 100%;">
+    <div class="portfolio-wrapper">
+      <a href="<?php echo $image['url']; ?>" data-featherlight="image"><img src="<?php echo $image['sizes']['gallery-thumb']; ?>" alt="<?php echo $image['alt']; ?>" /></a>
     </div>
   </div>
         <?php endforeach; ?>

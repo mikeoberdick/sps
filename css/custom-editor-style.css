@@ -9667,7 +9667,7 @@ h1, h2, h3, h4, h5 {
       content: '';
       width: 50px;
       height: 50px;
-      background-image: url("/http://www.dev.designs4theweb.com/sps/img/quote_bg.png");
+      background-image: url("http://www.dev.designs4theweb.com/sps/img/quote_bg.png");
       background-size: contain;
       background-repeat: no-repeat;
       opacity: .2;
@@ -9836,10 +9836,14 @@ h1, h2, h3, h4, h5 {
 
 #filters {
   padding: 0;
-  list-style: none; }
+  list-style: none;
+  display: flex;
+  text-align: center;
+  flex-wrap: wrap; }
 
 #filters li {
-  float: left; }
+  float: left;
+  flex-grow: 1; }
 
 #filters li span {
   display: block;
@@ -9855,23 +9859,23 @@ h1, h2, h3, h4, h5 {
   background: #ff7d14;
   color: #fff; }
 
-#portfoliolist .portfolio {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -o-box-sizing: border-box;
-  margin: 1%;
-  display: none;
-  float: left;
-  overflow: hidden; }
-
-.portfolio-wrapper {
-  overflow: hidden;
-  position: relative !important;
-  background: #666;
-  cursor: pointer;
-  padding: 0; }
-
-.portfolio img {
-  max-width: 100%;
-  position: relative;
-  top: 0; }
+#portfoliolist {
+  justify-content: space-around; }
+  #portfoliolist .portfolio {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    display: none;
+    float: left;
+    overflow: hidden; }
+    #portfoliolist .portfolio .portfolio-wrapper {
+      overflow: hidden;
+      position: relative !important;
+      background: transparent;
+      cursor: pointer;
+      padding: 0;
+      margin-bottom: 15px; }
+      #portfoliolist .portfolio .portfolio-wrapper img {
+        max-width: 100%;
+        position: relative;
+        top: 0; }

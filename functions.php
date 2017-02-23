@@ -132,3 +132,9 @@ function sps_add_img_tag_taxonomy() {
     register_taxonomy( 'image_tag', 'attachment', $args );
 }
 add_action( 'init', 'sps_add_img_tag_taxonomy' );
+
+// Add the gallery thumbnail size
+add_action( 'after_setup_theme', 'sps_gallery_pics' );
+function sps_gallery_pics() {
+    add_image_size( 'gallery-thumb', 400, 400, array( 'center', 'top' ) );
+}
