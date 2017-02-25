@@ -157,18 +157,14 @@ h1, h2, h3, h4, h5 {
 }
 
 .entry-title {
+	margin-bottom: 50px;
 	text-align: center;
     font-weight: bold;
     font-size: 5vh;
     color: #fff;
     background: $brand-primary;
     text-transform: uppercase;
-    margin-bottom: 0;
     padding: 50px 0;
-}
-
-.entry-content {
-	margin-top: 50px;
 }
 
 /* Homepage
@@ -459,6 +455,12 @@ h1, h2, h3, h4, h5 {
    	margin: 0 auto;
    	margin-top: 50px;
    }
+
+.single, .archive {
+	#content {
+		margin-top: 50px;
+	}
+}
 
 /* Forms
    ========================================================================== */

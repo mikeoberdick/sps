@@ -35,8 +35,6 @@ if( $images ): ?>
 
 <div id="portfoliolist" class = "row">
 
-
-
 <?php foreach( $images as $image ): ?>
 
 <?php $terms = wp_get_post_terms($image['ID'], 'image_tag'); ?>
